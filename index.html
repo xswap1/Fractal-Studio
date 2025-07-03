@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="pageTitle">Fractal Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="language-overlay">
+    <div class="language-selector-box">
+        <h2 data-i18n="selectLangTitle">Select Your Language</h2>
+        <p data-i18n="selectLangPrompt">Please choose your preferred language to continue.</p>
+        <div class="language-options-grid">
+            <button class="lang-btn" data-lang="en" data-i18n="langBtnEn">English</button>
+            <button class="lang-btn" data-lang="es" data-i18n="langBtnEs">Español</button>
+            <button class="lang-btn" data-lang="hi" data-i18n="langBtnHi">हिन्दी</button>
+            <button class="lang-btn" data-lang="ru" data-i18n="langBtnRu">Русский</button>
+            <button class="lang-btn" data-lang="pt" data-i18n="langBtnPt">Português</button>
+            <button class="lang-btn" data-lang="fr" data-i18n="langBtnFr">Français</button>
+            <button class="lang-btn" data-lang="ar" data-i18n="langBtnAr">العربية</button>
+        </div>
+    </div>
+  </div>
+
+  <div id="intro">
+    <img src="97d03b34-7f26-461f-b8da-91fcb579eb2e.png" alt="Fractal Studio Logo" class="intro-logo">
+    <h1 data-i18n="introTitle">Fractal Studio</h1>
+  </div>
+
+  <div id="app-container">
+    <header class="app-header">
+      <a href="#" class="logo-container nav-link" data-target="main-content" style="padding-left: 10px;">
+        <span class="site-name" data-i18n="siteName">Fractal Studio</span>
+      </a>
+
+      <div id="nav-wrapper" class="nav-wrapper">
+        <nav>
+          <div class="nav-menu">
+            <div class="dropdown">
+              <button class="dropdown-toggle nav-link-style" data-i18n="navServices">Services <i class="fas fa-chevron-down dropdown-arrow"></i></button>
+              <div class="mega-menu">
+                <div class="mega-menu-grid">
+                  <a href="#" class="mega-menu-item nav-link" data-target="illustration-details">
+                    <h4 data-i18n="navIllu">Illustration</h4>
+                    <p data-i18n="navIlluDesc">Custom visuals and mascots.</p>
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                  <a href="#" class="mega-menu-item nav-link" data-target="video-details">
+                    <h4 data-i18n="navVideo">Video Editing</h4>
+                    <p data-i18n="navVideoDesc">Engaging stories from raw footage.</p>
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                  <a href="#" class="mega-menu-item nav-link" data-target="community-details">
+                    <h4 data-i18n="navComm">Community Mgmt</h4>
+                    <p data-i18n="navCommDesc">Build and manage online communities.</p>
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                  <a href="#" class="mega-menu-item nav-link" data-target="chatter-details">
+                    <h4 data-i18n="navChatter">Chatter/Hype Team</h4>
+                    <p data-i18n="navChatterDesc">Keep your community active and visible.</p>
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                  <a href="#" class="mega-menu-item nav-link" data-target="twitter-details">
+                    <h4 data-i18n="navTwitter">Twitter Marketing</h4>
+                    <p data-i18n="navTwitterDesc">Boost engagement with viral content.</p>
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                  <a href="#" class="mega-menu-item nav-link" data-target="website-details">
+                    <h4 data-i18n="navWebsite">Website Custom</h4>
+                    <p data-i18n="navWebsiteDesc">Visually impressive and functional sites.</p>
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+            <a href="#" class="nav-link nav-link-style" data-target="comparison-section" data-i18n="navDifference">The Difference</a>
+
+            <div class="dropdown">
+              <button class="dropdown-toggle nav-link-style" data-i18n="navExpertise">Expertise <i class="fas fa-chevron-down dropdown-arrow"></i></button>
+              <div class="mega-menu">
+                 <div class="mega-menu-grid expertise-grid">
+                    <a href="#" class="mega-menu-item nav-link" data-target="crypto-success">
+                      <h4 data-i18n="navWeb3">Web3 Projects</h4>
+                      <p data-i18n="navWeb3Desc">Propel your project in the crypto space.</p>
+                      <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#" class="mega-menu-item nav-link" data-target="business-success">
+                      <h4 data-i18n="navBusiness">Business Projects</h4>
+                      <p data-i18n="navBusinessDesc">Grow your business with our digital services.</p>
+                      <i class="fas fa-arrow-right"></i>
+                    </a>
+                 </div>
+              </div>
+            </div>
+            
+            <a href="#" class="nav-link nav-link-style" data-target="cases-section" data-i18n="navCases">Cases</a>
+            <a href="#" class="nav-link nav-link-style" data-target="main-content" data-i18n="navAbout">About</a>
+            <a href="https://t.me/xMintsb" target="_blank" class="nav-link-style" data-i18n="navWorkWithUs">work with us</a>
+          </div>
+        </nav>
+        <a href="https://t.me/xMintsb" target="_blank" class="btn btn-primary cta-button-nav">
+          <span data-i18n="btnTalkToUs">Talk to us</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+      
+      <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+
+    </header>
+
+    <div id="content-wrapper">
+      
+      <main id="main-content">
+        <section class="hero" data-glow="style-1">
+          <div class="text-content">
+            <h1 data-i18n="heroTitle">We build faster than the <span class="highlight">market moves.</span></h1>
+            <p data-i18n="heroSubtitle">Our work has helped memecoins go viral, DeFi protocols earn trust, and Web3 projects stand out in the noisiest markets.</p>
+            <a href="https://t.me/xMintsb" target="_blank" class="btn btn-primary">
+                <span data-i18n="btnTalkToUs">Talk to us</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+          <div class="media">
+            <img src="97d03b34-7f26-461f-b8da-91fcb579eb2e.png" alt="Preview" />
+          </div>
+        </section>
+
+        <section class="service-teaser-grid" data-glow="style-2">
+            <a href="#" class="service-teaser-card" data-target="illustration-details">
+              <img src="Logo_Video_Editing_Services_FInal.png" alt="Illustration Icon" class="service-card-icon">
+              <h3 data-i18n="teaserIlluTitle">Illustration</h3>
+              <p class="service-card-summary" data-i18n="teaserIlluDesc">We bring your ideas to life with custom illustrations in any style, from 3D Art and Pixar-style to minimalist designs.</p>
+              <span class="card-arrow"><i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="#" class="service-teaser-card" data-target="video-details">
+              <img src="Logo_Illustration_Services_FInal.png" alt="Video Editing Icon" class="service-card-icon">
+              <h3 data-i18n="teaserVideoTitle">Video Editing</h3>
+              <p class="service-card-summary" data-i18n="teaserVideoDesc">We transform raw footage into compelling stories that captivate audiences and drive results on any platform.</p>
+              <span class="card-arrow"><i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="#" class="service-teaser-card" data-target="community-details">
+              <img src="Logo_Video_Community Management_Services_FInal.png" alt="Community Management Icon" class="service-card-icon">
+              <h3 data-i18n="teaserCommTitle">Community Management</h3>
+              <p class="service-card-summary" data-i18n="teaserCommDesc">We build and manage dynamic online communities that drive engagement, organic growth, and long-term brand loyalty.</p>
+              <span class="card-arrow"><i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="#" class="service-teaser-card" data-target="chatter-details">
+              <img src="Logo_Video_Chatter_Services_FInal.png" alt="Chatter/Hype Team Icon" class="service-card-icon">
+              <h3 data-i18n="teaserChatterTitle">Chatter/Hype Team</h3>
+              <p class="service-card-summary" data-i18n="teaserChatterDesc">Our team keeps your community active, sparks meaningful conversations, and builds hype to keep your project visible.</p>
+              <span class="card-arrow"><i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="#" class="service-teaser-card" data-target="twitter-details">
+              <img src="raw.png" alt="Twitter Marketing Icon" class="service-card-icon">
+              <h3 data-i18n="teaserTwitterTitle">Twitter Marketing</h3>
+              <p class="service-card-summary" data-i18n="teaserTwitterDesc">We craft strategies that boost your engagement organically through memes and viral content to make your brand stand out.</p>
+              <span class="card-arrow"><i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="#" class="service-teaser-card" data-target="website-details">
+              <img src="raw2.png" alt="Custom Websites Icon" class="service-card-icon">
+              <h3 data-i18n="teaserWebsiteTitle">Custom Websites</h3>
+              <p class="service-card-summary" data-i18n="teaserWebsiteDesc">Your website is your digital flagship. We design and develop custom sites that are visually impressive and highly functional.</p>
+              <span class="card-arrow"><i class="fas fa-arrow-right"></i></span>
+            </a>
+        </section>
+        
+        <section id="portfolio-links-section" class="portfolio-links" data-glow="style-5">
+            <div class="portfolio-links-header">
+                <h2 data-i18n="portfolioTitle">Our Full Portfolio</h2>
+                <p data-i18n="portfolioDesc">The result? Work that speaks for itself. Explore our complete collection of projects.</p>
+            </div>
+            <div class="portfolio-links-grid">
+                <a href="#" class="portfolio-link-btn" data-target="portfolio-illustration">
+                    <span class="portfolio-link-icon"><i class="fas fa-arrow-right"></i></span>
+                    <span data-i18n="navIllu">Illustration</span>
+                </a>
+                <a href="#" class="portfolio-link-btn" data-target="portfolio-video">
+                    <span class="portfolio-link-icon"><i class="fas fa-arrow-right"></i></span>
+                    <span data-i18n="navVideo">Video Editing</span>
+                </a>
+                <a href="#" class="portfolio-link-btn" data-target="portfolio-community">
+                    <span class="portfolio-link-icon"><i class="fas fa-arrow-right"></i></span>
+                    <span data-i18n="navComm">Community Mgmt</span>
+                </a>
+                <a href="#" class="portfolio-link-btn" data-target="portfolio-chatter">
+                    <span class="portfolio-link-icon"><i class="fas fa-arrow-right"></i></span>
+                    <span data-i18n="navChatter">Chatter/Hype Team</span>
+                </a>
+                <a href="#" class="portfolio-link-btn" data-target="portfolio-twitter">
+                    <span class="portfolio-link-icon"><i class="fas fa-arrow-right"></i></span>
+                    <span data-i18n="navTwitter">Twitter Marketing</span>
+                </a>
+                <a href="#" class="portfolio-link-btn" data-target="portfolio-website">
+                    <span class="portfolio-link-icon"><i class="fas fa-arrow-right"></i></span>
+                    <span data-i18n="navWebsite">Website Custom</span>
+                </a>
+            </div>
+        </section>
+
+        <section id="speed-section" class="speed-section">
+          <div class="luxury-card">
+            <i class="fas fa-bolt speed-icon"></i>
+            <h2 data-i18n="speedTitle">Speed with Fractal Studio</h2>
+            <p class="tagline" data-i18n="speedTagline">At Fractal Studio, we don’t follow the pace of the market, we set it.</p>
+            <p data-i18n="speedP1">In a digital world where trends change weekly and attention spans last seconds, speed isn’t a luxury, it’s the standard. That’s why we build systems, workflows, and processes designed to deliver fast without compromising quality.</p>
+            <p data-i18n="speedP2">Every project we take on is treated as a top priority. We adapt quickly to last minute changes, new ideas, or unexpected challenges without slowing down or losing focus.</p>
+            <p data-i18n="speedP3">Our team is fast, creative, and built to perform under pressure.</p>
+            <p class="conclusion" data-i18n="speedConclusion">And that shows in the results.</p>
+          </div>
+        </section>
+
+        <section id="packs-section" class="packs-section-reworked" data-glow="style-6">
+            <div class="packs-header">
+                <h2 data-i18n="packsTitle">Explore Our Service Packs</h2>
+                <p data-i18n="packsSubtitle">Tailored solutions designed to deliver maximum impact. Choose the pack that best fits your project's needs and let's start building.</p>
+            </div>
+
+            <div class="packs-floating-logo-container">
+              <img src="97d03b34-7f26-461f-b8da-91fcb579eb2e.png" alt="Fractal Studio Logo" class="packs-floating-logo">
+            </div>
+            
+            <div class="pack-tabs-container">
+              <div class="pack-tabs-nav">
+                  <button class="pack-tab-btn active" data-tab-target="#memecoin-pack-content" data-i18n="packTabMemecoin">Memecoin</button>
+                  <button class="pack-tab-btn" data-tab-target="#creator-pack-content" data-i18n="packTabCreator">Content Creators</button>
+                  <button class="pack-tab-btn" data-tab-target="#business-pack-content" data-i18n="packTabBusiness">Local Business</button>
+                  <button class="pack-tab-btn" data-tab-target="#agency-pack-content" data-i18n="packTabAgency">Agencies</button>
+                  <button class="pack-tab-btn" data-tab-target="#ecommerce-pack-content" data-i18n="packTabEcomm">E-Commerce</button>
+              </div>
+  
+              <div class="pack-content-container">
+                  <div id="memecoin-pack-content" class="pack-content-pane active">
+                      <div class="pack-tier-grid">
+                          <div class="pack-tier-card">
+                              <h3 data-i18n="memecoinTier1Title">🥉 MemeKick</h3>
+                              <p data-i18n="memecoinTier1Desc">Logo, banner, meme-style mascot (Pepe, Doge, etc.), color palette, typography, and basic Discord/Telegram setup.</p>
+                              <ul>
+                                  <li data-i18n="memecoinTier1Feat1"><i class="fas fa-check-circle"></i> 3 Memes + 2 Emotes + 2 Stickers</li>
+                                  <li data-i18n="memecoinTier1Feat2"><i class="fas fa-check-circle"></i> 1 Viral Twitter Copy + Quick Launch Guide</li>
+                                  <li data-i18n="memecoinTier1Feat3"><i class="fas fa-check-circle"></i> Mini Website & 1 Meme Edit (10s)</li>
+                                  <li data-i18n="memecoinTier1Feat4"><i class="fas fa-check-circle"></i> 1 Day of Moderation & Hype Team</li>
+                              </ul>
+                              <div class="pack-price-glow">$200</div>
+                          </div>
+                          <div class="pack-tier-card popular">
+                              <h3 data-i18n="memecoinTier2Title">🥈 MemeStorm</h3>
+                              <p data-i18n="memecoinTier2Desc">Everything in MemeKick, plus advanced community setup with bots, dynamic roles, and emojis.</p>
+                              <ul>
+                                  <li data-i18n="memecoinTier2Feat1"><i class="fas fa-check-circle"></i> Custom Bot</li>
+                                  <li data-i18n="memecoinTier2Feat2"><i class="fas fa-check-circle"></i> +10 Memes, 5 Stickers, 5 Emotes, 2 GIFs</li>
+                                  <li data-i18n="memecoinTier2Feat3"><i class="fas fa-check-circle"></i> +2 Twitter Threads & 3 Copies</li>
+                                  <li data-i18n="memecoinTier2Feat4"><i class="fas fa-check-circle"></i> Degen-style Mini Website</li>
+                                  <li data-i18n="memecoinTier2Feat5"><i class="fas fa-check-circle"></i> Chatter Team (3 days) & Community Management (10 days)</li>
+                              </ul>
+                              <div class="pack-price-glow">$500</div>
+                          </div>
+                          <div class="pack-tier-card">
+                              <h3 data-i18n="memecoinTier3Title">🥇 MemeEmpire</h3>
+                              <p data-i18n="memecoinTier3Desc">Everything in MemeStorm, plus full branding with an animated logo and 3D/pixel mascot.</p>
+                              <ul>
+                                  <li data-i18n="memecoinTier3Feat1"><i class="fas fa-check-circle"></i> Full 3-Section Website with Animations</li>
+                                  <li data-i18n="memecoinTier3Feat2"><i class="fas fa-check-circle"></i> Custom Bot with Advanced AI (Tools + Software)</li>
+                                  <li data-i18n="memecoinTier3Feat3"><i class="fas fa-check-circle"></i> 15 Memes, 2 Vertical Videos, 3 Animated GIFs</li>
+                                  <li data-i18n="memecoinTier3Feat4"><i class="fas fa-check-circle"></i> Narrated Teaser Video (Storytelling)</li>
+                                  <li data-i18n="memecoinTier3Feat5"><i class="fas fa-check-circle"></i> Ad Pack of 5 for X & Discord</li>
+                                  <li data-i18n="memecoinTier3Feat6"><i class="fas fa-check-circle"></i> Community Management (15 days)</li>
+                              </ul>
+                              <div class="pack-price-glow">$1100</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div id="creator-pack-content" class="pack-content-pane">
+                      <div class="pack-tier-grid">
+                          <div class="pack-tier-card">
+                              <h3 data-i18n="creatorTier1Title">🥉 Creator Starter</h3>
+                              <p data-i18n="creatorTier1Desc">Logo, cartoon avatar, banner, custom Linktree or editable mini-site, and Discord setup.</p>
+                              <ul>
+                                  <li data-i18n="creatorTier1Feat1"><i class="fas fa-check-circle"></i> 3 Thumbnails + 2 Edited Reels</li>
+                                  <li data-i18n="creatorTier1Feat2"><i class="fas fa-check-circle"></i> 5 Story or Post Designs</li>
+                                  <li data-i18n="creatorTier1Feat3"><i class="fas fa-check-circle"></i> 10 Marketing Ads (Preferred Social)</li>
+                                  <li data-i18n="creatorTier1Feat4"><i class="fas fa-check-circle"></i> Discord Moderation (10 days) + Hype Team (1 day)</li>
+                              </ul>
+                              <div class="pack-price-glow">$150</div>
+                          </div>
+                          <div class="pack-tier-card popular">
+                              <h3 data-i18n="creatorTier2Title">🥈 Creator Boost</h3>
+                              <p data-i18n="creatorTier2Desc">All of the above, plus 5 professionally edited reels and a dedicated content channel.</p>
+                              <ul>
+                                  <li data-i18n="creatorTier2Feat1"><i class="fas fa-check-circle"></i> Discord/Telegram Channel with your phrases, links, FAQs</li>
+                                  <li data-i18n="creatorTier2Feat2"><i class="fas fa-check-circle"></i> Discord with special roles + paid/VIP channel</li>
+                                  <li data-i18n="creatorTier2Feat3"><i class="fas fa-check-circle"></i> Marketing via Meme Posts (any social)</li>
+                                  <li data-i18n="creatorTier2Feat4"><i class="fas fa-check-circle"></i> Community Management + Hype Team (3 days)</li>
+                              </ul>
+                              <div class="pack-price-glow">$400</div>
+                          </div>
+                          <div class="pack-tier-card">
+                              <h3 data-i18n="creatorTier3Title">🥇 Creator System</h3>
+                              <p data-i18n="creatorTier3Desc">Personal website/portfolio, 10 reels, 3 narrated videos, and an AI system for support and sales.</p>
+                              <ul>
+                                  <li data-i18n="creatorTier3Feat1"><i class="fas fa-check-circle"></i> Custom Alert Bot for New Content</li>
+                                  <li data-i18n="creatorTier3Feat2"><i class="fas fa-check-circle"></i> 1 Custom Tool</li>
+                                  <li data-i18n="creatorTier3Feat3"><i class="fas fa-check-circle"></i> Gamified Community (roles, badges, perks)</li>
+                                  <li data-i18n="creatorTier3Feat4"><i class="fas fa-check-circle"></i> Mini Membership System</li>
+                                  <li data-i18n="creatorTier3Feat5"><i class="fas fa-check-circle"></i> Community Management + Hype Team (5 days)</li>
+                              </ul>
+                              <div class="pack-price-glow">$700</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div id="business-pack-content" class="pack-content-pane">
+                    <div class="pack-tier-grid">
+                        <div class="pack-tier-card">
+                            <h3 data-i18n="businessTier1Title">🥉 Local Digital</h3>
+                            <p data-i18n="businessTier1Desc">Logo, banner, brand palette, and a one-section mini-website (services, socials, location).</p>
+                            <ul>
+                                <li data-i18n="businessTier1Feat1"><i class="fas fa-check-circle"></i> Telegram Channel Setup</li>
+                                <li data-i18n="businessTier1Feat2"><i class="fas fa-check-circle"></i> Community Management for Customer Retention</li>
+                                <li data-i18n="businessTier1Feat3"><i class="fas fa-check-circle"></i> 5 Promotional Ads/Images</li>
+                                <li data-i18n="businessTier1Feat4"><i class="fas fa-check-circle"></i> 1 Animated Reel or Story + Digital Menu</li>
+                            </ul>
+                            <div class="pack-price-glow">$100</div>
+                        </div>
+                        <div class="pack-tier-card popular">
+                            <h3 data-i18n="businessTier2Title">🥈 Total Visibility</h3>
+                            <p data-i18n="businessTier2Desc">All of the above, plus a full 3-section website and a promotional video.</p>
+                            <ul>
+                                <li data-i18n="businessTier2Feat1"><i class="fas fa-check-circle"></i> Visual Catalog Design</li>
+                                <li data-i18n="businessTier2Feat2"><i class="fas fa-check-circle"></i> Booking/Contact System</li>
+                                <li data-i18n="businessTier2Feat3"><i class="fas fa-check-circle"></i> AI for WhatsApp, Telegram & Web</li>
+                                <li data-i18n="businessTier2Feat4"><i class="fas fa-check-circle"></i> 10 Visuals (Promos, Carousels, Offers)</li>
+                                <li data-i18n="businessTier2Feat5"><i class="fas fa-check-circle"></i> Community Management on Telegram</li>
+                            </ul>
+                            <div class="pack-price-glow">$400</div>
+                        </div>
+                        <div class="pack-tier-card">
+                            <h3 data-i18n="businessTier3Title">🥇 Full Local Presence</h3>
+                            <p data-i18n="businessTier3Desc">Full responsive website (up to 5 sections + animations) and a CRM setup on Discord/Telegram.</p>
+                            <ul>
+                                <li data-i18n="businessTier3Feat1"><i class="fas fa-check-circle"></i> Multichannel AI + Bot for Quick Support</li>
+                                <li data-i18n="businessTier3Feat2"><i class="fas fa-check-circle"></i> 2 Promotional Videos (Narrated & Vertical)</li>
+                                <li data-i18n="businessTier3Feat3"><i class="fas fa-check-circle"></i> Purchase Reward System</li>
+                                <li data-i18n="businessTier3Feat4"><i class="fas fa-check-circle"></i> 15 Days of Support & Adjustments</li>
+                            </ul>
+                            <div class="pack-price-glow">$700</div>
+                        </div>
+                    </div>
+                  </div>
+                   <div id="agency-pack-content" class="pack-content-pane">
+                    <div class="pack-tier-grid">
+                      <div class="pack-tier-card">
+                          <h3 data-i18n="agencyTier1Title">🥉 Freelancer Pro</h3>
+                          <p data-i18n="agencyTier1Desc">Logo, basic branding, mini portfolio/contact website, and 3 visuals for proposals.</p>
+                          <ul>
+                              <li data-i18n="agencyTier1Feat1"><i class="fas fa-check-circle"></i> Telegram Channel Setup</li>
+                              <li data-i18n="agencyTier1Feat2"><i class="fas fa-check-circle"></i> 5 Edited Posts</li>
+                              <li data-i18n="agencyTier1Feat3"><i class="fas fa-check-circle"></i> Sales Page</li>
+                              <li data-i18n="agencyTier1Feat4"><i class="fas fa-check-circle"></i> Tracking in Excel</li>
+                          </ul>
+                          <div class="pack-price-glow">$100</div>
+                      </div>
+                      <div class="pack-tier-card popular">
+                          <h3 data-i18n="agencyTier2Title">🥈 Agency Tools</h3>
+                          <p data-i18n="agencyTier2Desc">All of the above, plus a professional website (up to 3 animated sections) and an internal CRM in Excel.</p>
+                          <ul>
+                              <li data-i18n="agencyTier2Feat1"><i class="fas fa-check-circle"></i> AI to answer about services, prices, and schedule</li>
+                              <li data-i18n="agencyTier2Feat2"><i class="fas fa-check-circle"></i> Editable Presentation + 5 Visual Ads</li>
+                              <li data-i18n="agencyTier2Feat3"><i class="fas fa-check-circle"></i> Telegram Setup & Management + Hype team (5 days)</li>
+                          </ul>
+                          <div class="pack-price-glow">$500</div>
+                      </div>
+                      <div class="pack-tier-card">
+                          <h3 data-i18n="agencyTier3Title">🥇 Fullstack Agency</h3>
+                          <p data-i18n="agencyTier3Desc">Website with animations, full portfolio, advanced AI for support and sales, and a branding pack.</p>
+                          <ul>
+                              <li data-i18n="agencyTier3Feat1"><i class="fas fa-check-circle"></i> Narrated Presentation Video</li>
+                              <li data-i18n="agencyTier3Feat2"><i class="fas fa-check-circle"></i> Discord Setup + Team/Client Roles</li>
+                              <li data-i18n="agencyTier3Feat3"><i class="fas fa-check-circle"></i> Telegram Setup & Management + Hype team (10 days)</li>
+                              <li data-i18n="agencyTier3Feat4"><i class="fas fa-check-circle"></i> 3 4K Advertising Images (3D - Realistic)</li>
+                          </ul>
+                          <div class="pack-price-glow">$700</div>
+                      </div>
+                    </div>
+                   </div>
+                   <div id="ecommerce-pack-content" class="pack-content-pane">
+                    <div class="pack-tier-grid">
+                      <div class="pack-tier-card">
+                          <h3 data-i18n="ecommTier1Title">🥉 E-com Starter</h3>
+                          <p data-i18n="ecommTier1Desc">Logo, banner, palette, and a Telegram channel with AI for stock/shipping queries.</p>
+                          <ul>
+                              <li data-i18n="ecommTier1Feat1"><i class="fas fa-check-circle"></i> 5 Designs for Promos or Stories</li>
+                              <li data-i18n="ecommTier1Feat2"><i class="fas fa-check-circle"></i> Product Catalog</li>
+                              <li data-i18n="ecommTier1Feat3"><i class="fas fa-check-circle"></i> Basic Website</li>
+                              <li data-i18n="ecommTier1Feat4"><i class="fas fa-check-circle"></i> Sales Tracking System in Excel</li>
+                          </ul>
+                          <div class="pack-price-glow">$125</div>
+                      </div>
+                      <div class="pack-tier-card popular">
+                          <h3 data-i18n="ecommTier2Title">🥈 E-com Boost</h3>
+                          <p data-i18n="ecommTier2Desc">Professional website (up to 100 products, with payment gateway), support AI, and a product video.</p>
+                          <ul>
+                              <li data-i18n="ecommTier2Feat1"><i class="fas fa-check-circle"></i> 10 4K Advertising Images (3D - Realistic)</li>
+                              <li data-i18n="ecommTier2Feat2"><i class="fas fa-check-circle"></i> Promo Notification Bot (Telegram)</li>
+                              <li data-i18n="ecommTier2Feat3"><i class="fas fa-check-circle"></i> Purchase Reward System</li>
+                              <li data-i18n="ecommTier2Feat4"><i class="fas fa-check-circle"></i> 5 Designs + 3 Twitter-ready Copies</li>
+                              <li data-i18n="ecommTier2Feat5"><i class="fas fa-check-circle"></i> Launch Strategy + Launch Website</li>
+                          </ul>
+                          <div class="pack-price-glow">$350</div>
+                      </div>
+                      <div class="pack-tier-card">
+                          <h3 data-i18n="ecommTier3Title">🥇 E-com Growth</h3>
+                          <p data-i18n="ecommTier3Desc">Complete store (up to 300 products, optimized UX), multichannel AI, and 2 promotional videos.</p>
+                          <ul>
+                              <li data-i18n="ecommTier3Feat1"><i class="fas fa-check-circle"></i> WhatsApp Bot + Telegram Community/Support Channel</li>
+                              <li data-i18n="ecommTier3Feat2"><i class="fas fa-check-circle"></i> Professional Catalog + Coupon/Referral System</li>
+                              <li data-i18n="ecommTier3Feat3"><i class="fas fa-check-circle"></i> Professional, Custom-Tailored Web Design</li>
+                              <li data-i18n="ecommTier3Feat4"><i class="fas fa-check-circle"></i> Launch Strategy + Launch Website</li>
+                              <li data-i18n="ecommTier3Feat5"><i class="fas fa-check-circle"></i> 20 4K Advertising Images (3D - Realistic)</li>
+                          </ul>
+                          <div class="pack-price-glow">$750</div>
+                      </div>
+                    </div>
+                   </div>
+              </div>
+            </div>
+        </section>
+        <section id="cases-section" class="success-cases" data-glow="style-3">
+            <div class="cases-grid-layout">
+                <div class="cases-content-left">
+                    <p class="cases-label" data-i18n="casesLabel">Results</p>
+                    <h2 data-i18n="casesTitle">Trusted by projects that need to move faster than the market.</h2>
+                </div>
+                <div class="cases-content-right">
+                    <p data-i18n="casesDesc">We've helped memecoins go viral, Web3 projects earn trust, and businesses grow their digital presence. Explore our impactful collaborations to see how we deliver results.</p>
+                    <div class="case-buttons">
+                        <a href="#" class="btn" data-target="crypto-success"><span data-i18n="casesBtnCrypto">Crypto Cases</span> <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="btn" data-target="business-success"><span data-i18n="casesBtnBusiness">Business Cases</span> <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="comparison-section" class="comparison-section" data-glow="style-4">
+            <div class="comparison-header">
+                <p class="comparison-label" data-i18n="compareLabel">Compare</p>
+                <h2 data-i18n="compareTitle">The Fractal Studio Difference</h2>
+                <p class="comparison-subtitle" data-i18n="compareSubtitle">The digital world is noisy. Standard solutions are not enough. Here’s how we provide real value where other agencies fall short.</p>
+            </div>
+            <div class="comparison-grid">
+                <h3 class="comparison-column-header" data-i18n="compareHeaderTypical">Typical Agencies</h3>
+                <h3 class="comparison-column-header" data-i18n="compareHeaderFractal">Fractal Studio</h3>
+
+                <div class="comparison-card minus">
+                    <span class="comparison-icon"><i class="fas fa-minus"></i></span>
+                    <p data-i18n="compareMinus1">Relies on generic templates and outdated strategies.</p>
+                </div>
+                <div class="comparison-card plus">
+                    <span class="comparison-icon"><i class="fas fa-plus"></i></span>
+                    <p data-i18n="comparePlus1">Delivers custom-designed solutions tailored to your brand's unique identity.</p>
+                </div>
+
+                <div class="comparison-card minus">
+                    <span class="comparison-icon"><i class="fas fa-minus"></i></span>
+                    <p data-i18n="compareMinus2">Slow, bureaucratic processes that miss market opportunities.</p>
+                </div>
+                <div class="comparison-card plus">
+                    <span class="comparison-icon"><i class="fas fa-plus"></i></span>
+                    <p data-i18n="comparePlus2">Builds faster than the market moves, ensuring speed and agility.</p>
+                </div>
+
+                <div class="comparison-card minus">
+                    <span class="comparison-icon"><i class="fas fa-minus"></i></span>
+                    <p data-i18n="compareMinus3">Sees community management as simple moderation.</p>
+                </div>
+                <div class="comparison-card plus">
+                    <span class="comparison-icon"><i class="fas fa-plus"></i></span>
+                    <p data-i18n="comparePlus3">Provides up to 16 hours of active support and hype teams to create dynamic communities.</p>
+                </div>
+
+                <div class="comparison-card minus">
+                    <span class="comparison-icon"><i class="fas fa-minus"></i></span>
+                    <p data-i18n="compareMinus4">Focuses on vanity metrics like likes and followers.</p>
+                </div>
+                <div class="comparison-card plus">
+                    <span class="comparison-icon"><i class="fas fa-plus"></i></span>
+                    <p data-i18n="comparePlus4">Drives real business outcomes: 5x Ad Spend ROI and 150% revenue growth.</p>
+                </div>
+
+                 <div class="comparison-card minus">
+                    <span class="comparison-icon"><i class="fas fa-minus"></i></span>
+                    <p data-i18n="compareMinus5">Creates content that gets lost in the noise.</p>
+                </div>
+                <div class="comparison-card plus">
+                    <span class="comparison-icon"><i class="fas fa-plus"></i></span>
+                    <p data-i18n="comparePlus5">Specializes in viral content and organic growth hacking to make your brand stand out.</p>
+                </div>
+            </div>
+        </section>
+
+      </main>
+      
+      <div id="illustration-details" class="page-detail-section">
+        <a href="#" class="btn-back" data-target="main-content"><span data-i18n="btnBackToMain">← Back to Main</span></a>
+        <h2 data-i18n="illuDetailTitle">Our Illustration Services</h2>
+        <div class="intro-service-text"><p data-i18n="illuDetailIntro">We bring your ideas to life with custom illustrations in any style. From 3D Art, Pixar-style, Cartoon, and anime, to tech or minimalist designs, we create visuals that reflect your brand. Skilled in Blender, Adobe Illustrator, and Paint Tool SAI, we adapt to any concept or platform to deliver unique results.</p></div>
+        <div class="illustration-showcase">
+            <img src="Pump it.png" alt="Illustration Example" class="showcase-image horizontal-image">
+            <img src="jerry meme.jpeg" alt="Illustration Example" class="showcase-image">
+            <img src="4.jpeg" alt="Illustration Example" class="showcase-image horizontal-image">
+            <img src="happy world.png" alt="Illustration Example" class="showcase-image">
+            <img src="coinray.jpg" alt="Illustration Example" class="showcase-image">
+            <img src="oldvapor.gif" alt="Illustration Example" class="showcase-image">
+            <img src="Felix_Gif_01.gif" alt="Illustration Example" class="showcase-image">
+            <img src="Articportfolio.jpg" alt="Illustration Example" class="showcase-image horizontal-image">
+        </div>
+        <div class="service-content-layout">
+            <div class="service-section">
+                <h3 data-i18n="illuContentTitle">Illustration That Converts</h3>
+                <ul class="service-features"><li data-i18n="illuFeature1"><strong>Styles for Every Need:</strong> 3D elements, 3D characters, cartoon style, professional and minimalist designs, expressive caricatures, ultra-realism, manga or anime, and the popular Pixar animated style. You choose!</li><li data-i18n="illuFeature2"><strong>Our Process:</strong> We create GIFs and animated videos that add motion and personality to your ideas.</li></ul>
+                <p><strong data-i18n="illuVision">Your vision is our canvas. We fully adapt to your idea, delivering fast and high-quality results.</strong></p>
+            </div>
+            <div class="service-section">
+                <h3 data-i18n="realProblemsTitle">Real Problems. Fractal Solutions.</h3>
+                <div class="problem-solution-card"><div class="problem"><i class="fas fa-lightbulb"></i><p data-i18n="illuProblem1">“I'm launching a product and I need it to look professional.”</p></div><div class="solution"><i class="fas fa-magic-wand-sparkles"></i><p><strong data-i18n="fractalSolution">Fractal solution:</strong> <span data-i18n="illuSolution1">We create custom illustrations to capture attention and strengthen your brand across all platforms.</span></p></div></div>
+                <div class="problem-solution-card"><div class="problem"><i class="fas fa-image"></i><p data-i18n="illuProblem2">“I want a mascot for my brand, but not generic.”</p></div><div class="solution"><i class="fas fa-star"></i><p><strong data-i18n="fractalSolution">Fractal solution:</strong> <span data-i18n="illuSolution2">We design unique, fully customized brand mascots that reflect your identity and purpose.</span></p></div></div>
+            </div>
+        </div>
+      </div>
+      
+      <div id="video-details" class="page-detail-section">
+          <a href="#" class="btn-back" data-target="main-content"><span data-i18n="btnBackToMain">← Back to Main</span></a>
+          <h2 data-i18n="videoDetailTitle">Our Video Editing Services</h2>
+          <div class="intro-service-text"><p data-i18n="videoDetailIntro">We transform raw footage into compelling stories. From dynamic promotional videos, engaging social media content, and professional corporate presentations to cinematic style project explainers, we deliver impact videos that capture attention and results.</p></div>
+          <div class="illustration-showcase">
+              <video poster="placeholder-video1.jpg" src="9aCZWheZ83jLaChy.mp4" class="showcase-image horizontal-image" controls></video>
+              <video poster="AboutG.png" src="O2bf6mbnMpT_PMdz.mp4" class="showcase-image" controls></video>
+              <video poster="Captura de pantalla 2025-05-31 120519.png" src="d1_YTnr-im9zUA4o.mp4" class="showcase-image horizontal-image" controls></video>
+              <video poster="33e pantalla 2025-05-31 120750.png" src="ATUCTRYaIWDAC8_X.mp4" class="showcase-image" controls></video>
+          </div>
+          <div class="service-content-layout">
+              <div class="service-section">
+                  <h3 data-i18n="videoContentTitle">Video Editing That Captivates</h3>
+                  <ul class="service-features"><li data-i18n="videoFeature1"><strong>Versatile Styles:</strong> Promotional videos, social media shorts (Reels, TikToks), corporate training, animated explainers, crypto project showcases with trends or memes content, event recaps, and more.</li><li data-i18n="videoFeature2"><strong>Our Process:</strong> From storyboarding and script refinement to editing, color grading, sound design, and motion graphics, we ensure a seamless and FAST workflow.</li></ul>
+              </div>
+              <div class="service-section">
+                  <h3 data-i18n="realProblemsTitle">Real Problems. Fractal Solutions.</h3>
+                  <div class="problem-solution-card"><div class="problem"><i class="fas fa-film"></i><p data-i18n="videoProblem1">“I have followers, but I’m not getting clients”</p></div><div class="solution"><i class="fas fa-magic-wand-sparkles"></i><p><strong data-i18n="fractalSolution">Fractal solution:</strong> <span data-i18n="videoSolution1">Our edits are designed to go viral, build authority, and convert views into real clients.</span></p></div></div>
+                  <div class="problem-solution-card"><div class="problem"><i class="fas fa-rocket"></i><p data-i18n="videoProblem2">“My project's content is too complex to explain in a video.”</p></div><div class="solution"><i class="fas fa-star"></i><p><strong data-i18n="fractalSolution">Fractal solution:</strong> <span data-i18n="videoSolution2">We specialize in turning complex ideas into clear, engaging visuals.</span></p></div></div>
+              </div>
+          </div>
+      </div>
+
+      <div id="community-details" class="page-detail-section">
+        <a href="#" class="btn-back" data-target="main-content"><span data-i18n="btnBackToMain">← Back to Main</span></a>
+        <h2 data-i18n="commDetailTitle">Our Community Management Services</h2>
+        <div class="intro-service-text"><p data-i18n="commDetailIntro">We build and manage dynamic online communities that drive engagement, organic growth, and long-term brand loyalty. From moderating technical discussions and organizing events to coordinating partnerships and activations on Discord, Telegram, and Twitter.</p></div>
+        <div class="illustration-showcase community-gallery">
+            <img src="ModeratorCaptura de pantalla 2024-07-29 171216.png" alt="Community Management Example" class="showcase-image community-gallery-image">
+            <img src="Mod2.png" alt="Community Management Example" class="showcase-image community-gallery-image">
+            <img src="mod3.png" alt="Community Management Example" class="showcase-image community-gallery-image">
+            <img src="mod4.png" alt="Community Management Example" class="showcase-image community-gallery-image">
+            <h4 class="community-bots-subtitle" data-i18n="commBotsSubtitle">Telegram and Discord Custom Bots</h4>
+            <img src="carbonCaptura de pantalla 2025-05-31 221451.png" alt="Custom Bot Example" class="showcase-image community-gallery-image">
+            <img src="carbon2.png" alt="Custom Bot Example" class="showcase-image community-gallery-image">
+            <img src="fractal bot 2.png" alt="Custom Bot Example" class="showcase-image community-gallery-image">
+            <img src="fractal bot.png" alt="Custom Bot Example" class="showcase-image community-gallery-image">
+        </div>
+        <div class="service-content-layout">
+            <div class="service-section">
+                <h3 data-i18n="commContentTitle">Community Growth Through Engagement</h3>
+                <ul class="service-features">
+                    <li data-i18n="commFeature1"><strong>Engagement & Activity Strategies:</strong> We include community events, interactive campaigns, coordinated raids, and consistent daily activity for up to 16 hours.</li>
+                    <li data-i18n="commFeature2"><strong>Moderation & Support:</strong> We ensure a safe and well-managed environment using the right tools and automation systems.</li>
+                    <li data-i18n="commFeature3"><strong>Custom Tools & Bots:</strong> We build fully tailored bots based on your needs. You define the functions; we develop and deploy them.</li>
+                    <li data-i18n="commFeature4"><strong>Reports & Insights:</strong> We deliver regular reports with metrics on growth, engagement, and more.</li>
+                </ul>
+            </div>
+            <div class="service-section">
+                <h3 data-i18n="realProblemsTitle">Real Problems. Fractal Solutions.</h3>
+                <div class="problem-solution-card"><div class="problem"><i class="fas fa-comments"></i><p data-i18n="commProblem1">“I want to start a community, but I don’t have time to manage it.”</p></div><div class="solution"><i class="fas fa-comments"></i><p><strong data-i18n="fractalSolution">Fractal solution:</strong> <span data-i18n="commSolution1">We handle your community with up to 16 hours of active support daily so your project grows even when you’re offline.</span></p></div></div>
+                <div class="problem-solution-card"><div class="problem"><i class="fas fa-user-shield"></i><p data-i18n="commProblem2">“There are too many scammers, and I need a protected community.”</p></div><div class="solution"><i class="fas fa-user-shield"></i><p><strong data-i18n="fractalSolution">Fractal solution:</strong> <span data-i18n="commSolution2">We build custom bots and security tools that protect your community 24/7.</span></p></div></div>
+            </div>
+        </div>
+      </div>
+
+      <div id="chatter-details" class="page-detail-section">
+          <a href="#" class="btn-back" data-target="main-content"><span data-i18n="btnBackToMain">← Back to Main</span></a>
+          <h2 data-i18n="chatterDetailTitle">Our Chatter/Hype Team Services</h2>
+          <div class="intro-service-text"><p data-i18n="chatterDetailIntro">Our Chatter Team keeps your community active and engaged. We spark meaningful conversations, build hype, and keep your channels buzzing so your project stays visible, exciting, and full of organic chatters.</p></div>
+          <div class="illustration-showcase chatter-gallery">
+              <img src="chatter1.png" alt="Chatter Team Example" class="showcase-image chatter-gallery-image">
+              <img src="Chatter 2.png" alt="Chatter Team Example" class="showcase-image chatter-gallery-image">
+              <img src="Chatter 3.png" alt="Chatter Team Example" class="showcase-image chatter-gallery-image">
+              <img src="Chatter 4.png" alt="Chatter Team Example" class="showcase-image chatter-gallery-image">
+          </div>
+          <div class="service-content-layout">
+              <div class="service-section">
+                  <h3 data-i18n="chatterContentTitle">Generating Buzz and Sustained Engagement</h3>
+                  <ul class="service-features">
+                      <li data-i18n="chatterFeature1"><strong>Strategic Hype Campaigns:</strong> We design and execute targeted campaigns to build anticipation ahead of launches, announcements, or major events.</li>
+                      <li data-i18n="chatterFeature2"><strong>Active Community Engagement:</strong> Our team actively participates in discussions and fosters a positive atmosphere on any selected platform.</li>
+                      <li data-i18n="chatterFeature3"><strong>Consistent Presence:</strong> We provide up to 14 hours of daily activity to ensure your community always looks alive and welcoming.</li>
+                  </ul>
+              </div>
+              <div class="service-section">
+                  <h3 data-i18n="realProblemsTitle">Real Problems. Fractal Solutions.</h3>
+                  <div class="problem-solution-card"><div class="problem"><i class="fas fa-volume-mute"></i><p data-i18n="chatterProblem1">“My project launch is approaching, but there’s no buzz.”</p></div><div class="solution"><i class="fas fa-bullhorn"></i><p><strong data-i18n="fractalSolution">Fractal solution:</strong> <span data-i18n="chatterSolution1">We create interactive discussions that generate anticipation and ensure your launch is a success.</span></p></div></div>
+                  <div class="problem-solution-card"><div class="problem"><i class="fas fa-users"></i><p data-i18n="chatterProblem2">“Our community channels feel inactive and engagement is low.”</p></div><div class="solution"><i class="fas fa-comments"></i><p><strong data-i18n="fractalSolution">Fractal solution:</strong> <span data-i18n="chatterSolution2">Our team joins your community organically to spark conversations and encourage interaction.</span></p></div></div>
+              </div>
+          </div>
+      </div>
+
+      <div id="twitter-details" class="page-detail-section">
+        <a href="#" class="btn-back" data-target="main-content"><span data-i18n="btnBackToMain">← Back to Main</span></a>
+        <h2 data-i18n="twitterDetailTitle">Our Twitter Marketing Services</h2>
+        <div class="intro-service-text"><p data-i18n="twitterDetailIntro">We specialize in crafting strategies that boost your post engagement organically through memes and viral content, amplify your brand voice, and generate real interaction. From viral posts to fully customized campaigns, we make your presence stand out.</p></div>
+        <div class="illustration-showcase twitter-gallery">
+            <img src="Twitter marketing 1.png" alt="Twitter Marketing Example" class="showcase-image">
+            <img src="Twitter marketing 2.png" alt="Twitter Marketing Example" class="showcase-image">
+            <img src="Twitter marketing 3.png" alt="Twitter Marketing Example" class="showcase-image">
+            <img src="Twitter marketing 4.png" alt="Twitter Marketing Example" class="showcase-image">
+        </div>
+        <div class="service-content-layout">
+            <div class="service-section">
+                <h3 data-i18n="twitterContentTitle">Elevate Your Twitter Presence</h3>
+                <ul class="service-features">
+                    <li data-i18n="twitterFeature1"><strong>Strategic Content Creation:</strong> Tweets, threads, and visual content tailored to today's attention span to connect with your audience.</li>
+                    <li data-i18n="twitterFeature2"><strong>Organic Growth Hacking:</strong> Proven techniques to authentically boost your reach and attract real followers within your niche.</li>
+                    <li data-i18n="twitterFeature3"><strong>Engagement Campaigns & Raids:</strong> Dynamics that increase visibility and interaction across your posts.</li>
+                    <li data-i18n="twitterFeature4"><strong>Analytics & Reporting:</strong> Frequent insights into your account performance to refine your strategy.</li>
+                </ul>
+            </div>
+            <div class="service-section">
+                <h3 data-i18n="realProblemsTitle">Real Problems. Fractal Solutions.</h3>
+                <div class="problem-solution-card"><div class="problem"><i class="fas fa-user-slash"></i><p data-i18n="twitterProblem1">“Our tweets get lost in the noise and aren’t reaching our audience.”</p></div><div class="solution"><i class="fas fa-rocket"></i><p><strong data-i18n="fractalSolution">Fractal solution:</strong> <span data-i18n="twitterSolution1">We develop focused content strategies to ensure your message stands out.</span></p></div></div>
+                <div class="problem-solution-card"><div class="problem"><i class="fas fa-users-cog"></i><p data-i18n="twitterProblem2">“Our follower count is stagnant.”</p></div><div class="solution"><i class="fas fa-user-plus"></i><p><strong data-i18n="fractalSolution">Fractal solution:</strong> <span data-i18n="twitterSolution2">We implement organic growth strategies and value-driven content that attracts and retains a genuine audience.</span></p></div></div>
+            </div>
+        </div>
+      </div>
+
+      <div id="website-details" class="page-detail-section">
+        <a href="#" class="btn-back" data-target="main-content"><span data-i18n="btnBackToMain">← Back to Main</span></a>
+        <h2 data-i18n="webDetailTitle">Our Custom Website Services</h2>
+        <div class="intro-service-text"><p data-i18n="webDetailIntro">Your website is your digital flagship. We design and develop custom websites that are not only visually impressive but also highly functional, intuitive, and performance-optimized. We build exactly what your project needs.</p></div>
+        <div class="illustration-showcase website-gallery">
+            <video src="website 1.mp4" alt="Custom Website Example" class="showcase-image video-bottom-left" controls autoplay muted loop></video>
+            <video src="website 2.mp4" alt="Custom Website Example" class="showcase-image video-top-left" controls autoplay muted loop></video>
+            <video src="website 3.mp4" alt="Custom Website Example" class="showcase-image video-right-tall" controls autoplay muted loop></video>
+            <video src="website 4.mp4" alt="Custom Website Example" class="showcase-image video-full-width-bottom" controls autoplay muted loop></video>
+        </div>
+        <div class="service-content-layout">
+            <div class="service-section">
+                <h3 data-i18n="webContentTitle">Websites Tailored to Your Vision</h3>
+                <ul class="service-features">
+                    <li data-i18n="webFeature1"><strong>Bespoke Design & UX/UI:</strong> Creating visually engaging and intuitive interfaces that provide an exceptional user experience.</li>
+                    <li data-i18n="webFeature2"><strong>Responsive & Mobile-First Development:</strong> Ensuring your website looks and performs flawlessly on all devices.</li>
+                    <li data-i18n="webFeature3"><strong>SEO Optimization & Performance:</strong> Building websites with search engine visibility and speed in mind.</li>
+                    <li data-i18n="webFeature4"><strong>E-commerce & Custom Functionality:</strong> Integrating robust online store capabilities, custom tools, or any specific features.</li>
+                </ul>
+            </div>
+            <div class="service-section">
+                <h3 data-i18n="realProblemsTitle">Real Problems. Fractal Solutions.</h3>
+                <div class="problem-solution-card"><div class="problem"><i class="fas fa-brush"></i><p data-i18n="webProblem1">“Our current website looks outdated and doesn't represent our brand.”</p></div><div class="solution"><i class="fas fa-drafting-compass"></i><p><strong data-i18n="fractalSolution">Fractal solution:</strong> <span data-i18n="webSolution1">We'll design a modern, visually compelling website that captures your brand's essence.</span></p></div></div>
+                <div class="problem-solution-card"><div class="problem"><i class="fas fa-mouse-pointer"></i><p data-i18n="webProblem2">“Users find our website confusing to navigate.”</p></div><div class="solution"><i class="fas fa-sitemap"></i><p><strong data-i18n="fractalSolution">Fractal solution:</strong> <span data-i18n="webSolution2">We focus on intuitive navigation and user-centric design for a seamless experience.</span></p></div></div>
+            </div>
+        </div>
+      </div>
+      
+      <div id="crypto-success" class="page-detail-section">
+        <a href="#" class="btn-back" data-target="main-content"><span data-i18n="btnBackToMain">← Back to Main</span></a>
+        <h2 data-i18n="cryptoSuccessTitle">Case Studies: Crypto Projects</h2>
+        <div class="intro-service-text"><p data-i18n="cryptoSuccessIntro">We help crypto projects grow by offering complete support: from building a strong presence on Twitter and crafting a unique visual identity, to developing user-friendly websites, growing engaged communities, and providing expert guidance backed by custom tools and code.</p></div>
+        <div class="layout-container">
+          <div class="success-entry">
+            <img src="F5vQQXov_400x400.jpg" alt="Fenix Finance Logo" class="success-entry-image">
+            <div class="success-entry-details">
+              <h4 class="project-title" data-i18n="fenixTitle">Fenix Finance</h4>
+              <p data-i18n="fenixDesc">We helped Fenix Finance, previously known as Chronos, build their main brand by creating all visual content for Twitter and Discord, providing custom tools and bots, and achieving real user conversion through organic Twitter growth and full community moderation.</p>
+              <div class="custom-stats">
+                <div><strong class="stat-value">34K+</strong><span data-i18n="followers">Followers</span></div>
+                <div><strong class="stat-value">100+</strong><span data-i18n="illustrations">Illustrations</span></div>
+                <div><strong class="stat-value">45%</strong><span data-i18n="tokenValueIncrease">Token Value Increase</span></div>
+              </div>
+              <a href="https://twitter.com/FenixFinance" target="_blank" class="btn"><span data-i18n="viewOnTwitter">View on Twitter</span></a>
+            </div>
+          </div>
+          <div class="success-entry">
+            <img src="Fff25vQQXov_400x400.jpg" alt="Carbon Terminal Visual" class="success-entry-image">
+            <div class="success-entry-details">
+              <h4 class="project-title" data-i18n="carbonTitle">Carbon Terminal</h4>
+              <p data-i18n="carbonDesc">We helped Carbon Terminal adapt to market trends by managing support tickets with AI, fostering partnerships, deploying custom bots for Telegram, and delivering meme content along with website design.</p>
+              <div class="custom-stats">
+                  <div><strong class="stat-value">40K+</strong><span data-i18n="followersGained">Followers Gained</span></div>
+                  <div><strong class="stat-value">5</strong><span data-i18n="customBotsCreated">Custom Bots Created</span></div>
+                  <div><strong class="stat-value">30+</strong><span data-i18n="illustrationsSent">Illustrations Sent</span></div>
+              </div>
+              <a href="https://twitter.com/carbon_app" target="_blank" class="btn"><span data-i18n="viewOnTwitter">View on Twitter</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="business-success" class="page-detail-section">
+        <a href="#" class="btn-back" data-target="main-content"><span data-i18n="btnBackToMain">← Back to Main</span></a>
+        <h2 data-i18n="bizSuccessTitle">Case Studies: Business Growth</h2>
+        <div class="intro-service-text"><p data-i18n="bizSuccessIntro">We help local and online businesses grow by creating custom websites, setting up sales systems, organizing customer lists (CRM), adding online stores features, using chatbots, and making visual content for promotion.</p></div>
+        <div class="layout-container">
+          <div class="success-entry">
+            <img src="75f7d367c58ec90083be2aa95741cee3~tplv-tiktokx-cropcenter_1080_1080.jpeg" alt="Young Indian Method" class="success-entry-image">
+            <div class="success-entry-details">
+              <h4 class="project-title" data-i18n="yimTitle">Young Indian Method</h4>
+              <p data-i18n="yimDesc">We supported Young Indian Method with social media marketing, daily content creation, client management, and optimized systems to turn attention into real sales.</p>
+              <div class="custom-stats">
+                <div><strong class="stat-value">34%</strong><span data-i18n="conversionRate">Conversion Rate</span></div>
+                <div><strong class="stat-value">150%</strong><span data-i18n="revenueGrowth">Revenue Growth</span></div>
+                <div><strong class="stat-value">3.5X</strong><span data-i18n="adSpendROI">Ad Spend ROI</span></div>
+              </div>
+              <a href="https://www.tiktok.com/@yimethod?_t=ZP-8wnfYFupKut&_r=1" target="_blank" class="btn"><span data-i18n="viewOnTikTok">View on TikTok</span></a>
+            </div>
+          </div>
+          <div class="success-entry">
+            <img src="a58880107d5b8f66c2f6a32b4a78b09c~tplv-tiktokx-cropcenter_1080_1080.jpeg" alt="Dale forma a tu exito" class="success-entry-image">
+            <div class="success-entry-details">
+              <h4 class="project-title" data-i18n="daleTitle">Dale forma a tu exito</h4>
+              <p data-i18n="daleDesc">We helped "Dale forma a tu éxito" attract more clients and retain their audience. Thanks to our systems and client conversion strategies, they achieved at least a 5x return on their marketing investment.</p>
+              <div class="custom-stats">
+                  <div><strong class="stat-value">5X</strong><span data-i18n="adSpendROI">Ad Spend ROI</span></div>
+                  <div><strong class="stat-value">150%</strong><span data-i18n="revenueGrowth">Revenue Growth</span></div>
+                  <div><strong class="stat-value" data-i18n="optimized">Optimized</strong><span data-i18n="userExperience">User Experience</span></div>
+              </div>
+              <a href="https://www.tiktok.com/@dale.forma.a.tu.e" target="_blank" class="btn"><span data-i18n="viewOnTikTok">View on TikTok</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="portfolio-illustration" class="page-detail-section portfolio-gallery-section">
+        <a href="#" class="btn-back" data-target="main-content"><span data-i18n="btnBackToMain">← Back to Main</span></a>
+        <h3 data-i18n="portfolioTitleIllu">Illustration Portfolio</h3>
+        <div class="gallery-container">
+            <div class="gallery-frame">
+                <button class="gallery-nav prev" aria-label="Previous Item">❮</button>
+                <div class="gallery-item-display"></div>
+                <button class="gallery-nav next" aria-label="Next Item">❯</button>
+            </div>
+        </div>
+        <div class="gallery-data" style="display: none;">
+            <div data-type="image" data-src="ilusimage-1.jpg"></div><div data-type="image" data-src="ilusimage-2.jpg"></div><div data-type="image" data-src="ilusimage-3.jpg"></div><div data-type="video" data-src="ilusimage-4.mp4"></div><div data-type="video" data-src="ilusimage-5.mp4"></div><div data-type="image" data-src="ilusimage-6.gif"></div><div data-type="image" data-src="ilusimage-7.gif"></div><div data-type="image" data-src="ilusimage-8.gif"></div><div data-type="image" data-src="ilusimage-9.jpg"></div><div data-type="image" data-src="ilusimage-10.jpg"></div><div data-type="image" data-src="ilusimage-11.jpg"></div><div data-type="image" data-src="ilusimage-12.jpg"></div><div data-type="image" data-src="ilusimage-13.jpg"></div><div data-type="image" data-src="ilusimage-14.jpg"></div><div data-type="image" data-src="ilusimage-15.jpg"></div><div data-type="image" data-src="ilusimage-16.jpg"></div><div data-type="image" data-src="ilusimage-17.jpg"></div><div data-type="image" data-src="ilusimage-18.jpg"></div><div data-type="image" data-src="ilusimage-19.jpg"></div><div data-type="image" data-src="ilusimage-20.jpg"></div><div data-type="image" data-src="ilusimage-21.jpg"></div><div data-type="image" data-src="ilusimage-22.jpg"></div><div data-type="image" data-src="ilusimage-23.jpg"></div><div data-type="image" data-src="ilusimage-24.jpg"></div><div data-type="image" data-src="ilusimage-25.jpg"></div><div data-type="image" data-src="ilusimage-26.jpg"></div><div data-type="image" data-src="ilusimage-27.jpg"></div><div data-type="image" data-src="ilusimage-28.jpg"></div><div data-type="image" data-src="ilusimage-29.jpg"></div><div data-type="image" data-src="ilusimage-30.jpg"></div><div data-type="image" data-src="ilusimage-31.jpg"></div><div data-type="image" data-src="ilusimage-32.jpg"></div><div data-type="image" data-src="ilusimage-33.jpg"></div><div data-type="image" data-src="ilusimage-34.jpg"></div><div data-type="image" data-src="ilusimage-35.jpg"></div><div data-type="image" data-src="ilusimage-36.jpg"></div><div data-type="image" data-src="ilusimage-37.jpg"></div><div data-type="image" data-src="ilusimage-38.jpg"></div><div data-type="image" data-src="ilusimage-39.jpg"></div><div data-type="image" data-src="ilusimage-40.jpg"></div><div data-type="image" data-src="ilusimage-41.jpg"></div><div data-type="image" data-src="ilusimage-42.jpg"></div><div data-type="image" data-src="ilusimage-43.jpg"></div><div data-type="image" data-src="ilusimage-44.jpg"></div><div data-type="image" data-src="ilusimage-45.jpg"></div><div data-type="image" data-src="ilusimage-46.jpg"></div><div data-type="image" data-src="ilusimage-47.jpg"></div><div data-type="image" data-src="ilusimage-48.jpg"></div><div data-type="image" data-src="ilusimage-49.jpg"></div><div data-type="image" data-src="ilusimage-50.jpg"></div><div data-type="image" data-src="ilusimage-51.jpg"></div><div data-type="image" data-src="ilusimage-52.jpg"></div><div data-type="image" data-src="ilusimage-53.jpg"></div><div data-type="image" data-src="ilusimage-54.jpg"></div><div data-type="image" data-src="ilusimage-55.jpg"></div><div data-type="image" data-src="ilusimage-56.jpg"></div><div data-type="image" data-src="ilusimage-57.jpg"></div><div data-type="image" data-src="ilusimage-58.jpg"></div><div data-type="image" data-src="ilusimage-59.jpg"></div><div data-type="image" data-src="ilusimage-60.jpg"></div><div data-type="image" data-src="ilusimage-61.jpg"></div><div data-type="image" data-src="ilusimage-62.jpg"></div><div data-type="image" data-src="ilusimage-63.jpg"></div><div data-type="image" data-src="ilusimage-64.jpg"></div><div data-type="image" data-src="ilusimage-65.jpg"></div><div data-type="image" data-src="ilusimage-66.jpg"></div><div data-type="image" data-src="ilusimage-67.jpg"></div><div data-type="image" data-src="ilusimage-68.jpg"></div><div data-type="image" data-src="ilusimage-69.jpg"></div><div data-type="image" data-src="ilusimage-70.jpg"></div><div data-type="image" data-src="ilusimage-71.jpg"></div><div data-type="image" data-src="ilusimage-72.jpg"></div><div data-type="image" data-src="ilusimage-73.jpg"></div><div data-type="image" data-src="ilusimage-74.jpg"></div><div data-type="image" data-src="ilusimage-75.jpg"></div><div data-type="image" data-src="ilusimage-76.jpg"></div><div data-type="image" data-src="ilusimage-77.jpg"></div><div data-type="image" data-src="ilusimage-78.jpg"></div><div data-type="image" data-src="ilusimage-79.jpg"></div><div data-type="image" data-src="ilusimage-80.jpg"></div><div data-type="image" data-src="ilusimage-81.jpg"></div><div data-type="image" data-src="ilusimage-82.jpg"></div><div data-type="image" data-src="ilusimage-83.jpg"></div><div data-type="image" data-src="ilusimage-84.jpg"></div><div data-type="image" data-src="ilusimage-85.jpg"></div><div data-type="image" data-src="ilusimage-86.jpg"></div><div data-type="image" data-src="ilusimage-87.jpg"></div><div data-type="image" data-src="ilusimage-88.jpg"></div><div data-type="image" data-src="ilusimage-89.jpg"></div><div data-type="image" data-src="ilusimage-90.jpg"></div><div data-type="image" data-src="ilusimage-91.jpg"></div><div data-type="image" data-src="ilusimage-92.jpg"></div><div data-type="image" data-src="ilusimage-93.jpg"></div><div data-type="image" data-src="ilusimage-94.jpg"></div><div data-type="image" data-src="ilusimage-95.jpg"></div><div data-type="image" data-src="ilusimage-96.jpg"></div><div data-type="image" data-src="ilusimage-97.jpg"></div><div data-type="image" data-src="ilusimage-98.jpg"></div><div data-type="image" data-src="ilusimage-99.jpg"></div><div data-type="image" data-src="ilusimage-100.jpg"></div><div data-type="image" data-src="ilusimage-101.jpg"></div><div data-type="image" data-src="ilusimage-102.jpg"></div><div data-type="image" data-src="ilusimage-103.jpg"></div><div data-type="image" data-src="ilusimage-104.jpg"></div><div data-type="image" data-src="ilusimage-105.jpg"></div><div data-type="image" data-src="ilusimage-106.jpg"></div><div data-type="image" data-src="ilusimage-107.jpg"></div><div data-type="image" data-src="ilusimage-108.jpg"></div><div data-type="image" data-src="ilusimage-109.jpg"></div><div data-type="image" data-src="ilusimage-110.jpg"></div><div data-type="image" data-src="ilusimage-111.jpg"></div><div data-type="image" data-src="ilusimage-112.jpg"></div><div data-type="image" data-src="ilusimage-113.jpg"></div><div data-type="image" data-src="ilusimage-114.jpg"></div><div data-type="image" data-src="ilusimage-115.jpg"></div><div data-type="image" data-src="ilusimage-116.jpg"></div><div data-type="image" data-src="ilusimage-117.jpg"></div><div data-type="image" data-src="ilusimage-118.jpg"></div><div data-type="image" data-src="ilusimage-119.jpg"></div><div data-type="image" data-src="ilusimage-120.jpg"></div><div data-type="image" data-src="ilusimage-121.jpg"></div><div data-type="image" data-src="ilusimage-122.jpg"></div><div data-type="image" data-src="ilusimage-123.jpg"></div><div data-type="image" data-src="ilusimage-124.jpg"></div><div data-type="image" data-src="ilusimage-125.jpg"></div><div data-type="image" data-src="ilusimage-126.jpg"></div><div data-type="image" data-src="ilusimage-127.jpg"></div><div data-type="image" data-src="ilusimage-128.jpg"></div><div data-type="image" data-src="ilusimage-129.jpg"></div><div data-type="image" data-src="ilusimage-130.jpg"></div><div data-type="image" data-src="ilusimage-131.jpg"></div><div data-type="image" data-src="ilusimage-132.jpg"></div><div data-type="image" data-src="ilusimage-133.jpg"></div><div data-type="image" data-src="ilusimage-134.jpg"></div><div data-type="image" data-src="ilusimage-135.jpg"></div><div data-type="image" data-src="ilusimage-136.jpg"></div><div data-type="image" data-src="ilusimage-137.jpg"></div><div data-type="image" data-src="ilusimage-138.jpg"></div><div data-type="image" data-src="ilusimage-139.jpg"></div><div data-type="image" data-src="ilusimage-140.jpg"></div><div data-type="image" data-src="ilusimage-141.jpg"></div><div data-type="image" data-src="ilusimage-142.jpg"></div><div data-type="image" data-src="ilusimage-143.jpg"></div><div data-type="image" data-src="ilusimage-144.jpg"></div><div data-type="image" data-src="ilusimage-145.jpg"></div><div data-type="image" data-src="ilusimage-146.jpg"></div><div data-type="image" data-src="ilusimage-147.jpg"></div><div data-type="image" data-src="ilusimage-148.jpg"></div><div data-type="image" data-src="ilusimage-149.jpg"></div><div data-type="image" data-src="ilusimage-150.jpg"></div><div data-type="image" data-src="ilusimage-151.jpg"></div><div data-type="image" data-src="ilusimage-152.jpg"></div><div data-type="image" data-src="ilusimage-153.jpg"></div><div data-type="image" data-src="ilusimage-154.jpg"></div><div data-type="image" data-src="ilusimage-155.jpg"></div><div data-type="image" data-src="ilusimage-156.jpg"></div><div data-type="image" data-src="ilusimage-157.jpg"></div><div data-type="image" data-src="ilusimage-158.jpg"></div><div data-type="image" data-src="ilusimage-159.jpg"></div><div data-type="image" data-src="ilusimage-160.jpg"></div><div data-type="image" data-src="ilusimage-161.jpg"></div><div data-type="image" data-src="ilusimage-162.jpg"></div><div data-type="image" data-src="ilusimage-163.jpg"></div><div data-type="image" data-src="ilusimage-164.jpg"></div><div data-type="image" data-src="ilusimage-165.jpg"></div><div data-type="image" data-src="ilusimage-166.jpg"></div><div data-type="image" data-src="ilusimage-167.jpg"></div><div data-type="image" data-src="ilusimage-168.jpg"></div><div data-type="image" data-src="ilusimage-169.jpg"></div><div data-type="image" data-src="ilusimage-170.jpg"></div><div data-type="image" data-src="ilusimage-171.jpg"></div><div data-type="image" data-src="ilusimage-172.jpg"></div><div data-type="image" data-src="ilusimage-173.jpg"></div><div data-type="image" data-src="ilusimage-174.jpg"></div>
+            </div>
+      </div>
+
+      <div id="portfolio-video" class="page-detail-section portfolio-gallery-section">
+        <a href="#" class="btn-back" data-target="main-content"><span data-i18n="btnBackToMain">← Back to Main</span></a>
+        <h3 data-i18n="portfolioTitleVideo">Video Editing Portfolio</h3>
+        <div class="gallery-container">
+            <div class="gallery-frame">
+                <button class="gallery-nav prev" aria-label="Previous Item">❮</button>
+                <div class="gallery-item-display"></div>
+                <button class="gallery-nav next" aria-label="Next Item">❯</button>
+            </div>
+        </div>
+        <div class="gallery-data" style="display: none;">
+            <div data-type="video" data-src="9aCZWheZ83jLaChy.mp4"></div>
+            <div data-type="video" data-src="O2bf6mbnMpT_PMdz.mp4"></div>
+            <div data-type="video" data-src="d1_YTnr-im9zUA4o.mp4"></div>
+            <div data-type="video" data-src="ATUCTRYaIWDAC8_X.mp4"></div>
+            <div data-type="video" data-src="editing 01.mp4"></div>
+            <div data-type="video" data-src="editing 02.mp4"></div>
+            <div data-type="video" data-src="editing 03.mp4"></div>
+            <div data-type="video" data-src="ilusimage-176.mp4"></div>
+        </div>
+      </div>
+
+      <div id="portfolio-community" class="page-detail-section portfolio-gallery-section">
+        <a href="#" class="btn-back" data-target="main-content"><span data-i18n="btnBackToMain">← Back to Main</span></a>
+        <h3 data-i18n="portfolioTitleComm">Community Mgmt Portfolio</h3>
+        <div class="gallery-container">
+            <div class="gallery-frame">
+                <button class="gallery-nav prev" aria-label="Previous Item">❮</button>
+                <div class="gallery-item-display"></div>
+                <button class="gallery-nav next" aria-label="Next Item">❯</button>
+            </div>
+        </div>
+        <div class="gallery-data" style="display: none;">
+            <div data-type="image" data-src="ModeratorCaptura de pantalla 2024-07-29 171216.png"></div>
+            <div data-type="image" data-src="Mod2.png"></div>
+            <div data-type="image" data-src="mod3.png"></div>
+            <div data-type="image" data-src="mod4.png"></div>
+            <div data-type="image" data-src="carbonCaptura de pantalla 2025-05-31 221451.png"></div>
+            <div data-type="image" data-src="fractal bot.png"></div>
+            <div data-type="image" data-src="cm1.png"></div>
+            <div data-type="image" data-src="IMG_1862.png"></div>
+            <div data-type="image" data-src="IMG_1863.png"></div>
+            <div data-type="image" data-src="cm2.png"></div>
+            <div data-type="image" data-src="cm3.png"></div>
+            <div data-type="image" data-src="cm4.png"></div>
+            <div data-type="image" data-src="cm5.png"></div>
+            <div data-type="image" data-src="cm6.png"></div>
+            <div data-type="image" data-src="cm7.png"></div>
+            <div data-type="image" data-src="cm8.png"></div>
+            <div data-type="image" data-src="cm9.png"></div>
+            <div data-type="image" data-src="cm10.png"></div>
+            <div data-type="image" data-src="cm11.png"></div>
+            <div data-type="image" data-src="cm12.png"></div>
+            <div data-type="image" data-src="cm13.png"></div>
+            <div data-type="image" data-src="cm14.png"></div>
+        </div>
+      </div>
+
+       <div id="portfolio-chatter" class="page-detail-section portfolio-gallery-section">
+        <a href="#" class="btn-back" data-target="main-content"><span data-i18n="btnBackToMain">← Back to Main</span></a>
+        <h3 data-i18n="portfolioTitleChatter">Chatter/Hype Team Portfolio</h3>
+        <div class="gallery-container">
+            <div class="gallery-frame">
+                <button class="gallery-nav prev" aria-label="Previous Item">❮</button>
+                <div class="gallery-item-display"></div>
+                <button class="gallery-nav next" aria-label="Next Item">❯</button>
+            </div>
+        </div>
+        <div class="gallery-data" style="display: none;">
+            <div data-type="image" data-src="chatter1.png"></div>
+            <div data-type="image" data-src="Chatter 2.png"></div>
+            <div data-type="image" data-src="Chatter 3.png"></div>
+            <div data-type="image" data-src="Chatter 4.png"></div>
+            <div data-type="image" data-src="chatters1.png"></div>
+            <div data-type="image" data-src="chatters2.png"></div>
+            <div data-type="image" data-src="chatters3.png"></div>
+            <div data-type="image" data-src="chatters4.png"></div>
+            <div data-type="image" data-src="chatters5.png"></div>
+        </div>
+      </div>
+
+      <div id="portfolio-twitter" class="page-detail-section portfolio-gallery-section">
+        <a href="#" class="btn-back" data-target="main-content"><span data-i18n="btnBackToMain">← Back to Main</span></a>
+        <h3 data-i18n="portfolioTitleTwitter">Twitter Marketing Portfolio</h3>
+        <div class="gallery-container">
+            <div class="gallery-frame">
+                <button class="gallery-nav prev" aria-label="Previous Item">❮</button>
+                <div class="gallery-item-display"></div>
+                <button class="gallery-nav next" aria-label="Next Item">❯</button>
+            </div>
+        </div>
+        <div class="gallery-data" style="display: none;">
+            <div data-type="image" data-src="Twitter marketing 1.png"></div>
+            <div data-type="image" data-src="Twitter marketing 2.png"></div>
+            <div data-type="image" data-src="Twitter marketing 3.png"></div>
+            <div data-type="image" data-src="Twitter marketing 4.png"></div>
+            <div data-type="image" data-src="Twitter marketing 5.png"></div>
+            <div data-type="image" data-src="Twitter marketing 6.png"></div>
+            <div data-type="image" data-src="Twitter marketing 7.png"></div>
+            <div data-type="image" data-src="Twitter marketing 8.png"></div>
+            <div data-type="image" data-src="Twitter marketing 9.png"></div>
+            <div data-type="image" data-src="Twitter marketing 10.png"></div>
+            <div data-type="image" data-src="Twitter marketing 11.png"></div>
+            <div data-type="image" data-src="Twitter marketing 12.png"></div>
+            <div data-type="image" data-src="Twitter marketing 13.png"></div>
+            <div data-type="image" data-src="Twitter marketing 14.png"></div>
+            <div data-type="image" data-src="Twitter marketing 15.png"></div>
+        </div>
+      </div>
+
+      <div id="portfolio-website" class="page-detail-section portfolio-gallery-section">
+        <a href="#" class="btn-back" data-target="main-content"><span data-i18n="btnBackToMain">← Back to Main</span></a>
+        <h3 data-i18n="portfolioTitleWebsite">Website Custom Portfolio</h3>
+        <div class="gallery-container">
+            <div class="gallery-frame">
+                <button class="gallery-nav prev" aria-label="Previous Item">❮</button>
+                <div class="gallery-item-display"></div>
+                <button class="gallery-nav next" aria-label="Next Item">❯</button>
+            </div>
+        </div>
+        <div class="gallery-data" style="display: none;">
+            <div data-type="video" data-src="website 1.mp4"></div><div data-type="video" data-src="website 2.mp4"></div><div data-type="video" data-src="website 3.mp4"></div><div data-type="video" data-src="website 4.mp4"></div>
+        </div>
+      </div>
+      
+      <div id="privacy-policy" class="page-detail-section">
+        <a href="#" class="btn-back" data-target="main-content"><span data-i18n="btnBackToMain">← Back to Main</span></a>
+        <h2 data-i18n="privacyTitle">Privacy Policy</h2>
+        <div class="intro-service-text" style="text-align: left; max-width: 800px; margin: 2rem auto;">
+            <p><strong data-i18n="lastUpdated">Last updated:</strong> June 30, 2025</p>
+            <p data-i18n="privacyP1">At Fractal Studio, we value the trust of everyone who visits and uses our platform. We are committed to maintaining a professional, transparent, and secure environment at all times. This policy reflects our dedication to providing a clear and responsible experience for all users.</p>
+            <p data-i18n="privacyP2">For any questions, feel free to contact us at: fractalcapitalnetwork@gmail.com</p>
+        </div>
+      </div>
+
+      <div id="terms-conditions" class="page-detail-section">
+        <a href="#" class="btn-back" data-target="main-content"><span data-i18n="btnBackToMain">← Back to Main</span></a>
+        <h2 data-i18n="termsTitle">Terms and Conditions</h2>
+        <div class="intro-service-text" style="text-align: left; max-width: 800px; margin: 2rem auto;">
+            <p><strong data-i18n="effectiveDate">Effective Date:</strong> June 30, 2025</p>
+            <p data-i18n="termsP1">By using this platform, you agree to the terms outlined below. Fractal Studio reserves the right to modify, suspend, or update any part of the site or its services without prior notice. All content is protected and may not be reused without permission. Access to our products and services must always remain fair, legal, and respectful.</p>
+            <p data-i18n="termsP2">We reserve the right to limit or suspend access for any user who violates these terms. For support or inquiries, contact us at fractalcapitalnetwork@gmail.com</p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+          <div class="footer-col">
+            <h4 data-i18n="footerContact">Contact Fractal</h4>
+            <ul>
+              <li><a href="mailto:fractalcapitalnetwork@gmail.com" data-i18n="footerContactEmail">fractalcapitalnetwork@gmail.com</a></li>
+              <li><a href="https://t.me/xMintsb" target="_blank" data-i18n="footerContactTelegram">Talk to us on Telegram</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 data-i18n="footerServices">Services</h4>
+            <ul>
+              <li><a href="#" data-target="illustration-details" data-i18n="navIllu">Illustration</a></li>
+              <li><a href="#" data-target="video-details" data-i18n="navVideo">Video Editing</a></li>
+              <li><a href="#" data-target="community-details" data-i18n="navComm">Community Mgmt</a></li>
+              <li><a href="#" data-target="chatter-details" data-i18n="navChatter">Chatter/Hype Team</a></li>
+              <li><a href="#" data-target="twitter-details" data-i18n="navTwitter">Twitter Marketing</a></li>
+              <li><a href="#" data-target="website-details" data-i18n="navWebsite">Website Custom</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 data-i18n="footerExpertise">Expertise</h4>
+            <ul>
+              <li><a href="#" data-target="crypto-success" data-i18n="navWeb3">Web3 Projects</a></li>
+              <li><a href="#" data-target="business-success" data-i18n="navBusiness">Business Projects</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 data-i18n="footerCompany">Company</h4>
+            <ul>
+              <li><a href="#" data-target="main-content" data-i18n="footerAbout">About</a></li>
+              <li><a href="#" data-target="cases-section" data-i18n="footerCases">Cases</a></li>
+              <li><a href="https://t.me/xMintsb" target="_blank" data-i18n="footerCareers">Careers</a></li>
+              <li><a href="https://t.me/xMintsb" target="_blank" data-i18n="footerHelp">Get Help</a></li>
+            </ul>
+          </div>
+        </div>
+      
+        <div class="footer-logo-section">
+            <img src="97d03b34-7f26-461f-b8da-91fcb579eb2e.png" alt="Fractal Studio Logo">
+            <span data-i18n="siteName">Fractal Studio</span>
+        </div>
+      
+        <div class="footer-bottom-bar">
+          <div class="footer-bottom-left">
+            <span data-i18n="footerRights">© 2025 Fractal Studio</span>
+            <a href="#" data-target="privacy-policy" data-i18n="footerPrivacy">Privacy Policy</a>
+            <a href="#" data-target="terms-conditions" data-i18n="footerTerms">Terms and Conditions</a>
+            </div>
+          <div class="footer-bottom-right">
+            <a href="https://t.me/xMintsb" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+          </div>
+        </div>
+    </footer>
+  </div>
+
+  <a href="https://t.me/xMintsb" class="telegram-fab" target="_blank" aria-label="Contact us on Telegram">
+    <i class="fab fa-telegram"></i>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
