@@ -12,6 +12,7 @@
 </head>
 <body>
 
+  <!-- Language selection overlay remains unchanged -->
   <div id="language-overlay">
     <div class="language-selector-box">
         <h2 data-i18n="selectLangTitle">Select Your Language</h2>
@@ -28,24 +29,36 @@
     </div>
   </div>
 
+  <!-- Intro screen remains unchanged -->
   <div id="intro">
     <img src="97d03b34-7f26-461f-b8da-91fcb579eb2e.png" alt="Fractal Studio Logo" class="intro-logo">
     <h1 data-i18n="introTitle">Fractal Studio</h1>
   </div>
 
   <div id="app-container">
+    <!-- ======================================================= -->
+    <!-- =========== HEADER AND NAVIGATION STRUCTURE =========== -->
+    <!-- ======================================================= -->
     <header class="app-header">
-      <a href="#" class="logo-container nav-link" data-target="main-content" style="padding-left: 10px;">
+      <a href="#" class="logo-container nav-link" data-target="main-content">
         <span class="site-name" data-i18n="siteName">Fractal Studio</span>
       </a>
 
+      <!-- The mobile menu button uses a span for a custom animated hamburger icon -->
+      <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-wrapper">
+        <span class="hamburger-icon"></span>
+      </button>
+
+      <!-- The navigation wrapper contains the entire menu for both desktop and mobile -->
       <div id="nav-wrapper" class="nav-wrapper">
-        <nav>
+        <nav class="nav-menu-container">
           <div class="nav-menu">
+            <!-- Dropdown for Services -->
             <div class="dropdown">
-              <button class="dropdown-toggle nav-link-style" data-i18n="navServices">Services <i class="fas fa-chevron-down dropdown-arrow"></i></button>
+              <button class="dropdown-toggle nav-link-style" aria-expanded="false" data-i18n="navServices">Services <i class="fas fa-chevron-down dropdown-arrow"></i></button>
               <div class="mega-menu">
                 <div class="mega-menu-grid">
+                  <!-- Each item is a link that will navigate to the corresponding section -->
                   <a href="#" class="mega-menu-item nav-link" data-target="illustration-details">
                     <h4 data-i18n="navIllu">Illustration</h4>
                     <p data-i18n="navIlluDesc">Custom visuals and mascots.</p>
@@ -82,8 +95,9 @@
             
             <a href="#" class="nav-link nav-link-style" data-target="comparison-section" data-i18n="navDifference">The Difference</a>
 
+            <!-- Dropdown for Expertise -->
             <div class="dropdown">
-              <button class="dropdown-toggle nav-link-style" data-i18n="navExpertise">Expertise <i class="fas fa-chevron-down dropdown-arrow"></i></button>
+              <button class="dropdown-toggle nav-link-style" aria-expanded="false" data-i18n="navExpertise">Expertise <i class="fas fa-chevron-down dropdown-arrow"></i></button>
               <div class="mega-menu">
                  <div class="mega-menu-grid expertise-grid">
                     <a href="#" class="mega-menu-item nav-link" data-target="crypto-success">
@@ -105,17 +119,18 @@
             <a href="https://t.me/xMintsb" target="_blank" class="nav-link-style" data-i18n="navWorkWithUs">work with us</a>
           </div>
         </nav>
-        <a href="https://t.me/xMintsb" target="_blank" class="btn btn-primary cta-button-nav">
-          <span data-i18n="btnTalkToUs">Talk to us</span>
-          <i class="fas fa-arrow-right"></i>
-        </a>
+        <div class="nav-cta-container">
+            <a href="https://t.me/xMintsb" target="_blank" class="btn btn-primary cta-button-nav">
+              <span data-i18n="btnTalkToUs">Talk to us</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
       </div>
-      
-      <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
-        <i class="fas fa-bars"></i>
-      </button>
-
     </header>
+    <!-- ======================================================= -->
+    <!-- =========== END OF HEADER SECTION =========== -->
+    <!-- ======================================================= -->
+
 
     <div id="content-wrapper">
       
